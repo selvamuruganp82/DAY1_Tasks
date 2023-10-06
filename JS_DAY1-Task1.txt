@@ -1,0 +1,7 @@
+Multiplexing: HTTP/1.1 loads files/resourcer one after the other, so if a JS/CSS/HTML cannot be loaded, it blocks all the other fils behind it. For fetching all the files it uses multiple TCP connections(connections per file).
+HTTP/2  use a single TCP connection to send multiple streams of data at once so that no one resource blocks any other resource. HTTP/2 does this by splitting data into binary-code messages and numbering these messages so that the client knows which stream each binary message belongs to.
+
+Server push: Typically, a server only sends content to a client if the client asks for it.  This approach is not always perfect for modern webpages, which often involve multiple files that the client must request. 
+HTTP/2 allows a server to "push" content to a client before the client asks for it. The server also sends a message letting the client know what pushed content/Get to expect.
+
+Header compression: Small files load more quickly than large ones. To speed up web performance, both HTTP/1.1 and HTTP/2 compress HTTP messages to make them smaller. However, HTTP/2 uses  method called HPACK that eliminates repeated information in HTTP header packets. This eliminates a few bytes from every HTTP packet. Given the volume of HTTP packets involved in loading even a single webpage, those bytes add up quickly, resulting in faster loading.
