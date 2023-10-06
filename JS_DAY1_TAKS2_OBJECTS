@@ -1,0 +1,18 @@
+JS Objects are different than basic datatypes (i.e. number, string, boolean, etc.). Primitive data types contain one value but Objects can hold many values in form of Key: value pair. These keys can be variables or functions and are called properties and methods, respectively, in the context of an object.
+Every object has some property associated with some value. These values can be accessed using these properties associated with them.
+
+In simple terms. “A JavaScript object is a collection of named values having state and behavior (properties and method)”.  This can be related to JSON (KEY and Value).
+
+For example: Person, car, games etc....
+
+Take the case of mobile.
+All moibles  have the same properties, but the property values differ from mobile to mobile. All mobile have the same methods, but the methods are performed at different times.
+
+1) Objects are variables too. But objects can contain many values.
+	var Mobile = {Make: “Nokia”, Model: 1100, Color: “White”, Price :"4500"};
+
+2) Object Properties
+	The name:values pairs (in JavaScript objects) are called properties.
+
+3)Object Methods
+	An object method is an object property containing a function definition.
